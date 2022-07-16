@@ -2,6 +2,7 @@ using LocalMarsQA.Pages;
 using System;
 using TechTalk.SpecFlow;
 using LocalMarsQA.Utilities;
+using OpenQA.Selenium.Chrome;
 
 namespace LocalMarsQA.StepDefinitions 
 {
@@ -12,6 +13,8 @@ namespace LocalMarsQA.StepDefinitions
         public void GivenILoginAsExistingSeller()
         {
             //Loginpage object initilization & definitions
+            driver = new ChromeDriver();
+            
             LoginPage loginPageObj = new LoginPage();
             loginPageObj.LoginActions(driver);
         }

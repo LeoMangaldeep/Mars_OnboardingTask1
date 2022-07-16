@@ -1,5 +1,4 @@
 ﻿using LocalMarsQA.Pages;
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -17,9 +16,6 @@ namespace LocalMarsQA.Utilities
         //Page object initialization
         LoginPage loginPageobj = new LoginPage();
 
-
-
-        [OneTimeSetUp]
         public void LoginActions()
         {
             //Open new chrome browser 
@@ -28,7 +24,7 @@ namespace LocalMarsQA.Utilities
             //Loginpage object initilization & definition
             loginPageobj.LoginActions(driver);
         }
-        [OneTimeTearDown]
+
         public void CloseTestRun()
         {
             driver.Close();
