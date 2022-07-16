@@ -98,9 +98,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("I add new language details in profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 9
- testRunner.Then("I verify the details added sucessfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
             }
             this.ScenarioCleanup();
         }

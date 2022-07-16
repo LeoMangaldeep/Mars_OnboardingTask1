@@ -19,7 +19,8 @@ namespace LocalMarsQA.StepDefinitions
         [When(@"I add new language details in profile page")]
         public void WhenIAddNewLanguageDetailsInProfilePage()
         {
-            throw new PendingStepException();
+            ProfilePage profilePageObj = new ProfilePage();
+            profilePageObj.AddNewLanguage(driver);
         }
 
         [Then(@"I verify the details added sucessfully")]

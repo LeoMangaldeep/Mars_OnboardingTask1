@@ -35,7 +35,7 @@ namespace LocalMarsQA.Pages
                     // Select email address & enter valid username credentials.
 
                     IWebElement emailAddress = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
-                    WaitHelpers.WaitForElementToBeClickable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[1]/input", 5);
+                   // WaitHelpers.WaitForElementToBeClickable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[1]/input", 5);
                     emailAddress.SendKeys("mangalins@gmail.com");
 
                     // Select password textbox and enter valid credentials.
