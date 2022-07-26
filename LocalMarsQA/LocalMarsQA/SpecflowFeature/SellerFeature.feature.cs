@@ -76,11 +76,22 @@ namespace LocalMarsQA.SpecflowFeature
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Seller profile addition")]
         [NUnit.Framework.CategoryAttribute("Seller")]
-        public void SellerProfileAddition()
+        [NUnit.Framework.TestCaseAttribute("Arabic", "Basic", null)]
+        [NUnit.Framework.TestCaseAttribute("Sou", "Conversational", null)]
+        [NUnit.Framework.TestCaseAttribute("Tamil", "Fluent", null)]
+        [NUnit.Framework.TestCaseAttribute("Roja", "Native/Bilingual", null)]
+        public void SellerProfileAddition(string language, string level, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Seller"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("language", language);
+            argumentsOfScenario.Add("level", level);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller profile addition", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
@@ -96,7 +107,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I login as existing seller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.When("I add new language details in profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I add new \'{0}\',\'{1}\' details in profile page", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 9
+ testRunner.Then(string.Format("the record should have updated \'{0}\',\'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
