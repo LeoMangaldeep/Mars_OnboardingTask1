@@ -37,15 +37,16 @@ namespace LocalMarsQA.Pages
         }
         public string GetNewLanguage(IWebDriver driver)
         {
+            WaitHelpers.WaitForElementToBeClikable(driver, "XPath", "//div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]", 5);
             IWebElement newLanguage = driver.FindElement(By.XPath("//div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]"));
             return newLanguage.Text;
         }
 
         public string GetNewLevel(IWebDriver driver)
         {
+            WaitHelpers.WaitForElementToBeClikable(driver, "XPath", "//div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[2]", 5);
             IWebElement newLevel = driver.FindElement(By.XPath("//div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[2]"));
             return newLevel.Text;
         }
-
     }
 }

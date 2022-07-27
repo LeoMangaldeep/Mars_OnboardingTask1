@@ -35,17 +35,17 @@ namespace LocalMarsQA.Pages
                     // Select email address & enter valid username credentials.
 
                     IWebElement emailAddress = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
-                    WaitHelpers.WaitForElementToBeClickable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[1]/input", 5);
+                    WaitHelpers.WaitForElementToBeClikable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[1]/input", 5);
                     emailAddress.SendKeys("mangalins@gmail.com");
 
                     // Select password textbox and enter valid credentials.
                     IWebElement passwordTextbox = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
-                    WaitHelpers.WaitForElementToBeClickable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[2]/input", 5);
+                    WaitHelpers.WaitForElementToBeClikable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[2]/input", 5);
                     passwordTextbox.SendKeys("industryconnect");
 
                     //identify the login textbox and click.
                     IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
-                    WaitHelpers.WaitForElementToBeClickable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[4]/button", 5);
+                    WaitHelpers.WaitForElementToBeClikable(driver, "XPath", "/html/body/div[2]/div/div/div[1]/div/div[4]/button", 5);
                     loginButton.Click();
 
                 Thread.Sleep(2500);

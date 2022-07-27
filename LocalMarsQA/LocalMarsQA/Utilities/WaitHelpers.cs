@@ -12,7 +12,7 @@ namespace LocalMarsQA.Utilities
     {
         //Implicit wait defined with 2 seconds
         // wait for element to be clickable
-        public static void WaitForElementToBeClickable(IWebDriver driver, String Locator, String LocatorId, int seconds)
+        public static void WaitForElementToBeClikable(IWebDriver driver, String Locator, String LocatorId, int seconds)
         {
             //implicit wait---- [var wait = new WebDriverWait(IWebDriver driver, new TimeSpan(0, 0, 2));]
 
@@ -31,7 +31,7 @@ namespace LocalMarsQA.Utilities
             {
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector(LocatorId)));
             }
-
+            
         }
     }
 }

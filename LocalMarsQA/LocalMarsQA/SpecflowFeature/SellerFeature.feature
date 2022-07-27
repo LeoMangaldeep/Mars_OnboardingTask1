@@ -3,7 +3,7 @@
 As seller need to add profile to be found.
 
 @Seller
-Scenario Outline: Seller profile addition
+Scenario: Seller profile addition
 	Given I login as existing seller
 	When I add new '<language>','<level>' details in profile page
 	Then the record should have updated '<language>','<level>'
